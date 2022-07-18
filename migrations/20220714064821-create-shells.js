@@ -1,15 +1,21 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Scores', {
+    await queryInterface.createTable('Shells', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      category: {
+      shellName: {
         type: Sequelize.STRING
+      },
+      shellDesc: {
+        type: Sequelize.STRING
+      },
+      shellScore: {
+        type: Sequelize.FLOAT
       },
       createdAt: {
         allowNull: false,
@@ -22,6 +28,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Scores');
+    await queryInterface.dropTable('Shells');
   }
 };
