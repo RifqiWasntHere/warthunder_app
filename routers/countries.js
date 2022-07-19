@@ -3,6 +3,6 @@ const router = express.Router();
 
 const countryControllers = require("../controllers/countryControllers");
 
-router.post("/addCountry", Controllers.addCountry);
+router.post("/addCountry", countryControllers.addCountry);
 
 module.exports = router;

@@ -3,6 +3,6 @@ const router = express.Router();
 
 const featureControllers = require("../controllers/featureControllers");
 
-router.post("/addFeature", Controllers.addFeature);
+router.post("/addFeature", featureControllers.addFeature);
 
 module.exports = router;
