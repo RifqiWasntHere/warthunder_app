@@ -11,3 +11,5 @@ class shellControllers {
     }
   }
 }
+
+module.exports = shellControllers;
