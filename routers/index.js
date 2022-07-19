@@ -1,11 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const Controllers = require("../controllers/controllers");
-router.post("/register", Controllers.register);
-router.post("/addTurret", Controllers.addTurret);
-router.post("/addShell", Controllers.addShell);
-router.post("/addFeature", Controllers.addFeature);
-router.post("/addCountry", Controllers.addCountry);
-router.post("/addTank", Controllers.addTank);
-router.post("/addPenetration", Controllers.addPenetration);
+
+const userControllers = require("../controllers/userControllers");
+
+router.post("/register", userControllers.register);
+
 module.exports = router;
