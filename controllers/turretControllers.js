@@ -11,3 +11,5 @@ class turretControllers {
     }
   }
 }
+
+module.exports = turretControllers;
