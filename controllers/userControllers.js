@@ -10,6 +10,14 @@ class userControllers {
       next(err);
     }
   }
+  static async userList(req, res, next) {
+    try {
+      let userList = await Users.findAll({ raw: true });
+      res.status(200).json(userList);
+    } catch (err) {
+      next(err);
+    }
+  }
 }
 
 module.exports = userControllers;
