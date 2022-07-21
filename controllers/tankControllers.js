@@ -16,6 +16,13 @@ class tankControllers {
       next(err);
     }
   }
+  static async showTanks(req, res, next) {
+    try {
+      let showTanks = await Tanks.findall //lom jadi
+    } catch (err) {
+      next(err``)
+    }
+  }
 }
 
 module.exports = tankControllers;
