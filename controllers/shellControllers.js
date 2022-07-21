@@ -10,6 +10,14 @@ class shellControllers {
       next(err);
     }
   }
+  static async shellList(req, res, next) {
+    try {
+      let shellList = await Shells.findAll({ raw: true });
+      res.status(200).json(shellList);
+    } catch (err) {
+      next(err);
+    }
+  }
 }
 
 module.exports = shellControllers;
