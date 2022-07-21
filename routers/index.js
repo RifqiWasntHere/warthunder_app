@@ -13,8 +13,6 @@ const turretRoutes = require("./turrets");
 
 router.post("/register", userControllers.register);
 
-router.get("/showUsers", userControllers.userList); //Test sequelize
-
 router.use("/country", countryRoutes);
 
 router.use("/turret", turretRoutes);
