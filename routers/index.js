@@ -1,4 +1,5 @@
 const express = require("express");
+const countryControllers = require("../controllers/countryControllers");
 const router = express.Router();
 
 const userControllers = require("../controllers/userControllers");
@@ -10,6 +11,9 @@ const tankRoutes = require("./tanks");
 const turretRoutes = require("./turrets");
 
 router.post("/register", userControllers.register);
-router.use("/addCountry", countryRoutes);
+
+router.get("/showUsers", userControllers.userList); //Test sequelize
+
+router.use("/country", countryRoutes);
 
 module.exports = router;
