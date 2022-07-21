@@ -14,6 +14,14 @@ class featureControllers {
       next(err);
     }
   }
+  static async featureList(req, res, next) {
+    try {
+      let featureList = await Features.findAll({ raw: true });
+      res.status(200).json(featureList);
+    } catch (err) {
+      next(err);
+    }
+  }
 }
 
 module.exports = featureControllers;
