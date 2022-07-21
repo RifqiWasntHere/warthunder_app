@@ -21,4 +21,6 @@ router.use("/shell", shellRoutes);
 
 router.use("/feature", featureRoutes);
 
+router.use("/tank", tankRoutes);
+
 module.exports = router;
