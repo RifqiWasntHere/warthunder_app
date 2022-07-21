@@ -21,4 +21,6 @@ router.use("/turret", turretRoutes);
 
 router.use("/shell", shellRoutes);
 
+router.use("/feature", featureRoutes);
+
 module.exports = router;
