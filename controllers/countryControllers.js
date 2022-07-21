@@ -10,6 +10,14 @@ class countryControllers {
       next(err);
     }
   }
+  static async countryList(req, res, next) {
+    try {
+      let countryList = await Countries.findAll({ raw: true });
+      res.status(200).json(countryList);
+    } catch (err) {
+      next(err);
+    }
+  }
 }
 
 module.exports = countryControllers;
