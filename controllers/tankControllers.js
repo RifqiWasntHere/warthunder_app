@@ -16,11 +16,12 @@ class tankControllers {
       next(err);
     }
   }
-  static async showTanks(req, res, next) {
+  static async tankList(req, res, next) {
     try {
-      let showTanks = await Tanks.findall //lom jadi
+      let tankList = await Tanks.findAll({ raw: true });
+      res.status(200).json(tankList);
     } catch (err) {
-      next(err``)
+      next(err);
     }
   }
 }
