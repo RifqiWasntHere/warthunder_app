@@ -10,6 +10,14 @@ class turretControllers {
       next(err);
     }
   }
+  static async turretList(req, res, next) {
+    try {
+      let turretList = await Turrets.findAll({ raw: true });
+      res.status(201).json(turretList);
+    } catch (err) {
+      next(err);
+    }
+  }
 }
 
 module.exports = turretControllers;
