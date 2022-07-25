@@ -11,6 +11,8 @@ const tankRoutes = require("./tanks");
 const turretRoutes = require("./turrets");
 const firepowerRoutes = require("./firepowers");
 const tankFeatureRoutes = require("./tankfeatures");
+const tankShellRoutes = require("./tankshells");
+const userCountryRoutes = require("./usercountries");
 
 router.post("/register", userControllers.register);
 
@@ -30,4 +32,7 @@ router.use("/firepower", firepowerRoutes);
 
 router.use("/tankFeature", tankFeatureRoutes);
 
+router.use("/tankShell", tankShellRoutes);
+
+router;
 module.exports = router;
