@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Penetrations.init(
     {
-      descripton: DataTypes.JSON,
+      description: DataTypes.JSON,
     },
     {
       sequelize,

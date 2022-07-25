@@ -23,4 +23,6 @@ router.use("/feature", featureRoutes);
 
 router.use("/tank", tankRoutes);
 
+router.use("/penetration", penetrationRoutes);
+
 module.exports = router;
