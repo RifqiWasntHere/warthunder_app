@@ -1,5 +1,4 @@
 const express = require("express");
-const countryControllers = require("../controllers/countryControllers");
 const router = express.Router();
 
 const userControllers = require("../controllers/userControllers");
@@ -10,6 +9,7 @@ const penetrationRoutes = require("./penetrations");
 const shellRoutes = require("./shells");
 const tankRoutes = require("./tanks");
 const turretRoutes = require("./turrets");
+const firepowerRoutes = require("./firepowers");
 
 router.post("/register", userControllers.register);
 
@@ -24,5 +24,7 @@ router.use("/feature", featureRoutes);
 router.use("/tank", tankRoutes);
 
 router.use("/penetration", penetrationRoutes);
+
+router.use("/firepower", firepowerRoutes);
 
 module.exports = router;
