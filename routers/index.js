@@ -34,5 +34,6 @@ router.use("/tankFeature", tankFeatureRoutes);
 
 router.use("/tankShell", tankShellRoutes);
 
-router;
+router.use("/userCountry", userCountryRoutes);
+
 module.exports = router;

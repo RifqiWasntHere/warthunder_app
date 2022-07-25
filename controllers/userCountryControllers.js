@@ -5,7 +5,7 @@ class userCountryControllers {
     try {
       const { userId, countryId } = req.body;
       let addUserCountry = await UserCountries.create({ userId, countryId });
-      res.status(201).json({ status: "User countries Added successfully." });
+      res.status(201).json({ status: "User countries successfully added ." });
     } catch (err) {
       next(err);
     }
