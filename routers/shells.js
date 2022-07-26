@@ -5,6 +5,6 @@ const shellControllers = require("../controllers/shellControllers");
 
 router.get("/", shellControllers.shellList);
 
-router.post("/addShell", shellControllers.addShell);
+router.post("/add", shellControllers.addShell);
 
 module.exports = router;

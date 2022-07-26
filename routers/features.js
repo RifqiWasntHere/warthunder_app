@@ -5,6 +5,6 @@ const featureControllers = require("../controllers/featureControllers");
 
 router.get("/", featureControllers.featureList);
 
-router.post("/addFeature", featureControllers.addFeature);
+router.post("/add", featureControllers.addFeature);
 
 module.exports = router;

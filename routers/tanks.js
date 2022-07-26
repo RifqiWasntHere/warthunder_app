@@ -5,6 +5,6 @@ const tankControllers = require("../controllers/tankControllers");
 
 router.get("/", tankControllers.tankList);
 
-router.post("/addTank", tankControllers.addTank);
+router.post("/add", tankControllers.addTank);
 
 module.exports = router;

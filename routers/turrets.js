@@ -5,6 +5,6 @@ const turretControllers = require("../controllers/turretControllers");
 
 router.get("/", turretControllers.turretList);
 
-router.post("/addTurret", turretControllers.addTurret);
+router.post("/addt", turretControllers.addTurret);
 
 module.exports = router;

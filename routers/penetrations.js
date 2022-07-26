@@ -3,6 +3,6 @@ const router = express.Router();
 
 const penetrationControllers = require("../controllers/penetrationControllers");
 
-router.post("/addPenetration", penetrationControllers.addPenetration);
+router.post("/add", penetrationControllers.addPenetration);
 
 module.exports = router;

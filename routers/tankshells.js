@@ -3,6 +3,6 @@ const router = express.Router();
 
 const tankShellControllers = require("../controllers/tankShellControllers");
 
-router.post("/addTankShell", tankShellControllers.addTankShell);
+router.post("/add", tankShellControllers.addTankShell);
 
 module.exports = router;
