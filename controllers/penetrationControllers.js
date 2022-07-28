@@ -28,6 +28,7 @@ class penetrationControllers {
   static async penetrationList(req, res, next) {
     try {
       let penetrationList = await Penetrations.findAll({ raw: true });
+      res.status(200).json(penetrationList);
     } catch (err) {
       next(err);
     }
