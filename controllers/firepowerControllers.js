@@ -14,7 +14,6 @@ class firepowerControllers {
       next(err);
     }
   }
-
   static async firepowerList(req, res, next) {
     try {
       let firepowerList = await Firepowers.findAll({ raw: true });
