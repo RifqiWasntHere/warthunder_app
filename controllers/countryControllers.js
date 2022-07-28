@@ -10,6 +10,17 @@ class countryControllers {
       next(err);
     }
   }
+  static async updateCountry(req, res, next) {
+    try {
+      let updateCountry = await Countries.update(
+        { countryName: req.body.countryName },
+        { where: { countryName: req.body.targetCountry } }
+      );
+      res.status(201).json({ status: "Country successfully updated" });
+    } catch (err) {
+      next(err);
+    }
+  }
   static async countryList(req, res, next) {
     try {
       let countryList = await Countries.findAll({ raw: true });
