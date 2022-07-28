@@ -10,6 +10,18 @@ class shellControllers {
       next(err);
     }
   }
+  static async updateShell(req, res, next) {
+    try {
+      const { shellName, shellDesc, shellScore, targetShell } = req.body;
+      let updateShell = await Shells.update(
+        { shellName, shellDesc, shellScore },
+        { where: { shellName: targetShell } }
+      );
+      res.status(201).json({ status: "Shell successfully updated." });
+    } catch (err) {
+      next(err);
+    }
+  }
   static async shellList(req, res, next) {
     try {
       let shellList = await Shells.findAll({ raw: true });
