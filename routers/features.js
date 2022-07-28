@@ -7,4 +7,6 @@ router.get("/", featureControllers.featureList);
 
 router.post("/add", featureControllers.addFeature);
 
+router.patch("/edit", featureControllers.updateFeature);
+
 module.exports = router;
