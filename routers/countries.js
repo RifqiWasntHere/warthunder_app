@@ -7,4 +7,6 @@ router.get("/", countryControllers.countryList);
 
 router.post("/add", countryControllers.addCountry);
 
+router.patch("/edit", countryControllers.updateCountry);
+
 module.exports = router;
