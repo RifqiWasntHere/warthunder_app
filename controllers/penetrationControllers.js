@@ -25,6 +25,13 @@ class penetrationControllers {
       next(err);
     }
   }
+  static async penetrationList(req, res, next) {
+    try {
+      let penetrationList = await Penetrations.findAll({ raw: true });
+    } catch (err) {
+      next(err);
+    }
+  }
 }
 
 module.exports = penetrationControllers;
