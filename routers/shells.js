@@ -7,4 +7,6 @@ router.get("/", shellControllers.shellList);
 
 router.post("/add", shellControllers.addShell);
 
+router.patch("/edit", shellControllers.updateShell);
+
 module.exports = router;
