@@ -10,10 +10,22 @@ class turretControllers {
       next(err);
     }
   }
+  static async updateTurret(req, res, next) {
+    try {
+      const { turretName, turretScore, targetTurret } = req.body;
+      let updateTurret = await Turrets.update(
+        { turretName, turretScore },
+        { where: { turretName: targetTurret } }
+      );
+      res.status(201).json({ status: "Turret successfully updated." });
+    } catch (err) {
+      next(err);
+    }
+  }
   static async turretList(req, res, next) {
     try {
       let turretList = await Turrets.findAll({ raw: true });
-      res.status(201).json(turretList);
+      res.status(200).json(turretList);
     } catch (err) {
       next(err);
     }
