@@ -11,7 +11,26 @@ class tankControllers {
         engine,
         countryId,
       });
-      res.status(201).json({ status: "Tank successfully added." });
+      res.status(201).json({ status: "Tank successfully added" });
+    } catch (err) {
+      next(err);
+    }
+  }
+  static async updateTank(req, res, next) {
+    try {
+      const { tankName, turretId, armorScore, engine, countryId, targetTank } =
+        req.body;
+      let addTank = await Tanks.update(
+        {
+          tankName,
+          turretId,
+          armorScore,
+          engine,
+          countryId,
+        },
+        { where: { tankName: targetTank } }
+      );
+      res.status(201).json({ status: "Tank   successfully updated" });
     } catch (err) {
       next(err);
     }
