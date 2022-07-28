@@ -20,9 +20,9 @@ class featureControllers {
         req.body;
       let updateFeature = await Features.update(
         {
-          featureName: featureName,
-          featureDesc: featureDesc,
-          featureScore: featureScore,
+          featureName,
+          featureDesc,
+          featureScore,
         },
         { where: { featureName: targetFeature } }
       );
