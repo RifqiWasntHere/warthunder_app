@@ -7,4 +7,6 @@ router.get("/", turretControllers.turretList);
 
 router.post("/add", turretControllers.addTurret);
 
+router.patch("/edit", turretControllers.updateTurret);
+
 module.exports = router;
