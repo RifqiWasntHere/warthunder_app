@@ -14,6 +14,7 @@ const tankFeatureRoutes = require("./tankfeatures");
 const tankShellRoutes = require("./tankshells");
 const userCountryRoutes = require("./usercountries");
 const userTankRoutes = require("./usertanks");
+const errorHandler = require("./errorHandler");
 
 router.post("/register", userControllers.register);
 
@@ -39,4 +40,5 @@ router.use("/userCountry", userCountryRoutes);
 
 router.use("/userTank", userTankRoutes);
 
+router.use(errorHandler);
 module.exports = router;
